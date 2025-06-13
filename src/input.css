@@ -48,5 +48,20 @@ body {
 }
 
 .hero-container .slide {
-  @apply sm:w-[10%] w-[0%]  transition-all duration-500 ease-in-out;
+  @apply sm:w-[10%] w-[0%] transition-all duration-500 ease-in-out;
+}
+
+.all-products::before {
+  content: "";
+  height: 150px;
+  width: 100%;
+  background-color: #ffc20e;
+  position: absolute;
+  bottom: 0;
+}
+
+@media(max-width: 600px) {
+  .all-products::before {
+    height: 100px;
+  }
 }

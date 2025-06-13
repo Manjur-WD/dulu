@@ -31,19 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "back.out",
   });
 
-  gsap.to("#hero", {
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "80% 50%",
-      end: "bottom 50%",
-      scrub: true,
-      // markers: true,
-    },
-    scale: 0.5,
-    rotate: -10,
-    ease: "none",
+  // gsap.to("#hero", {
+  //   scrollTrigger: {
+  //     trigger: "#hero",
+  //     start: "80% 50%",
+  //     end: "bottom 50%",
+  //     scrub: true,
+  //     // markers: true,
+  //   },
+  //   scale: 0.5,
+  //   rotate: -10,
+  //   ease: "none",
 
-  })
+  // })
 
   gsap.from("#about-us h2", {
     scrollTrigger: {
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // markers: true,
       scrub: true,
     },
-    x: 100,
+    y: 100,
     opacity: 0,
     duration: 1,
     stagger: 0.2,
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // markers: true,
       scrub: true,
     },
-    x: 100,
+    y: 100,
     opacity: 0,
     duration: 5,
     stagger: 0.5,

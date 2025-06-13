@@ -75,15 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.from(".all-products img", {
     scrollTrigger: {
       trigger: ".all-products",
-      start: "top 60%",
-      end: "30% 60%",
+      start: "top 50%",
+      end: "30% 50%",
       // markers: true,
       scrub: true,
     },
     x: 100,
     opacity: 0,
-    duration: 1,
-    stagger: 0.2,
+    duration: 5,
+    stagger: 0.5,
     ease: "back.out",
   })
 
@@ -101,5 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.3,
     ease: "back.out",
   })
+
+  const navTl = gsap.timeline();
+
+  navTl.to("#navbarNav", {
+    left: 0,
+    duration: 1,
+  });
+
+  navTl.pause();
+
+  const menuBtn = document.querySelector("#navbar-toggler");
+  const closeBtn = document.querySelector("#close-btn");
+  menuBtn.addEventListener("click", () => {
+    navTl.play();
+  });
+
+  closeBtn.addEventListener("click", () => {
+    navTl.reverse();
+  });
 
 });

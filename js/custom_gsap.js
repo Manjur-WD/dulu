@@ -72,6 +72,21 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: 0.2,
     ease: "back.out",
   })
+  gsap.from("#about-us .about-logo", {
+    scrollTrigger: {
+      trigger: "#about-us .about-logo",
+      start: "top 70%",
+      end: "30% 70%",
+      stagger: 0.2,
+      // markers: true,
+      scrub: true,
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "back.out",
+  })
   gsap.from(".all-products img", {
     scrollTrigger: {
       trigger: ".all-products",
